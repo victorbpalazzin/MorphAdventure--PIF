@@ -4,7 +4,7 @@ Uma jornada através dos elementos
 
 ## 🎮 Jogar online
 
-[**Baixar Morph Adventure em HTML**](https://github.com/victorbpalazzin/MorphAdventure--PIF/raw/refs/heads/main/MorphAdventure.html)
+[⬇️ Baixar Morph Adventure (.zip)](https://github.com/victorbpalazzin/MorphAdventure--PIF/archive/refs/heads/main.zip)
 
 ⚠️ Protótipo: este jogo está em desenvolvimento. Mecânicas, visual, balanceamento e conteúdo ainda podem mudar, e você pode encontrar bugs.
 
