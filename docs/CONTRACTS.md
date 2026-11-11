@@ -167,7 +167,7 @@ Effects recebe eventos de feedback e atualiza partículas com limite de capacida
 
 Retorne cada sinal uma vez; repetições de ENTERED/BLACKOUT são protegidas pelo core, mas a pessoa 6 não deve depender disso para avançar timers. `life.reset_world` faz reset completo apenas no início de uma partida/mundo fora do fade preservado. Pausar suspende todos esses callbacks de tempo e retoma o modo exato.
 
-Ordem de desenho: cenário → obstáculos → itens → portal → personagem → partículas → HUD/telas → camada de transição. A camada final de fade cobre HUD na troca de mundo. Todo desenho acontece dentro do render target lógico iniciado por `main.c`; os módulos não chamam `BeginDrawing`/`EndDrawing` nem abrem uma segunda janela.
+Ordem de desenho: cenário → obstáculos → itens → portal → personagem → partículas → HUD/telas → camada de transição. A camada final de fade cobre HUD na troca de mundo. Em `GAME_WON`, o core não chama `draw_transition`: o blackout final não pode esconder a tela de vitória, pois seu relógio já parou. Nas demais fases, inclusive pausa durante transição, o callback continua disponível. Todo desenho acontece dentro do render target lógico iniciado por `main.c`; os módulos não chamam `BeginDrawing`/`EndDrawing` nem abrem uma segunda janela.
 
 ## Máquina de estados
 

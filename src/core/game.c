@@ -369,7 +369,9 @@ void GameDraw(Game *g)
     m->player.draw(m->player.life.context, &g->state, &items);
     m->effects.draw_particles(m->effects.life.context, &g->state);
     m->ui.draw(m->ui.life.context, &g->state, &items);
-    m->effects.draw_transition(m->effects.life.context, &g->state);
+    /* The final blackout stops advancing at WON; never cover the victory UI. */
+    if (g->state.mode != GAME_WON)
+        m->effects.draw_transition(m->effects.life.context, &g->state);
 }
 
 const char *GameModeName(GameMode mode)

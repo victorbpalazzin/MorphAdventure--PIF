@@ -50,6 +50,8 @@ Execute uma etapa apenas se a compilação anterior terminou com sucesso. Não c
 
 ## Evidências de validação
 
+- Revisão antes do merge: verificações do teste usam `CHECK`, que permanece ativo com `NDEBUG`; inicialização/coleta não desaparecem em Release. Testes executados também com `-O2 -DNDEBUG`.
+- Regressão do fade final: a campanha simulada verifica que a camada de transição continua sendo desenhada entre mundos e durante pausa, mas deixa de ser desenhada em vitória.
 - Compilação do core e janela com `-std=c99 -Wall -Wextra -Werror -Wpedantic`: passou.
 - Teste puro C: passou; verifica 120 passos de simulação em dois segundos com frames de 30, 60, 120 e 144 Hz; impulso pendente/consumo único; pausa/foco; descarte de atraso; mouse dentro/fora e consumido pela UI; transformação de viewport; lifecycle/falha parcial; score; escudo/dano; seis transições e vida persistente; eventos/estado inválidos.
 - Teste da campanha usa **estado preparado e módulos simulados**, não uma partida real jogada. Ele prova a coordenação do core, não os algoritmos dos colegas nem a dificuldade final.
