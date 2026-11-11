@@ -2,6 +2,10 @@
 🐦 Morph Adventure
 Uma jornada através dos elementos
 
+## 🎮 Jogar online
+
+[**Abrir Morph Adventure no navegador**](https://victorbpalazzin.github.io/MorphAdventure--PIF/)
+
 ⚠️ Protótipo: este jogo está em desenvolvimento. Mecânicas, visual, balanceamento e conteúdo ainda podem mudar, e você pode encontrar bugs.
 
 Morph Adventure é um jogo de voo com rolagem lateral, feito em HTML, CSS e JavaScript. Você guia um personagem por seis mundos elementais, desvia de obstáculos, coleta energia e encontra o portal que leva ao próximo mundo.
